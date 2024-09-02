@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap');
+
+:root {
+    --primary-color: #00FF1E;
+    --primary-color-hover: #004d00;
+    --primary-bg-color: #001600;
+    --secondary-bg-color: #f4f4f4;
+    --text-color: #333;
+    --content-background-color: #fff;
+    --box-shadow-color: rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+    --transition-duration: 0.3s;
+}
+
+/* Estilos gerais */
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Jura", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: var(--primary-bg-color);
+}
+
+strong {
+    font-weight: bold;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+header {
+    padding: 1em 1em 0em 1em;
+    height: 13vh;
+    background-color: var(--primary-bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .logo {
+        color: white;
+        font-size: 2em;
+
+        >span {
+            color: var(--primary-color);
+        }
+    }
+
+    .selected {
+        background-color: white;
+        color: var(--primary-bg-color) !important;
+    }
+
+    .headerMenuButton {
+        display: flex;
+        gap: 1em;
+        font-weight: 500;
+
+        .headerButton {
+            cursor: pointer;
+            text-decoration: none;
+            color: var(--secondary-bg-color);
+            padding: 1em;
+            border-radius: 1em 1em 0em 0em;
+
+        }
+
+        .headerButton:hover {
+            background-color: var(--secondary-bg-color);
+            color: var(--primary-bg-color);
+        }
+
+        .headerButton:active {
+            background-color: var(--primary-color);
+            color: var(--primary-bg-color);
+        }
+    }
+
+
+}
+
+@media only screen and (max-width: 769px) {
+    header {
+        height: 16vh;
+        gap: 0.5em;
+
+        .logo {
+            font-size: 1.5em;
+        }
+
+        .headerMenuButton {
+            gap: 0.5em;
+
+            .headerButton {
+                padding: 0.5em;
+            }
+
+
+        }
+
+
+    }
+}
